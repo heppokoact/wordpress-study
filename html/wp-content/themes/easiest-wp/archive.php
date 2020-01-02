@@ -37,6 +37,10 @@
 				<p>投稿がありません。</p>
 			<?php } ?>
 
+			<?php if (is_category()) { ?>
+				<?php wp_list_categories(); ?>
+			<?php } ?>
+
 		</div>
 
 		<?php
