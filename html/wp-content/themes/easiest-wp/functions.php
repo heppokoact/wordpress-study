@@ -55,3 +55,9 @@ function easiestwp_customize_register($wpc)
     }
 }
 add_action('customize_register', 'easiestwp_customize_register');
+
+function easiestwp_front_page_template($template)
+{
+    return is_home() ? '' : $template;
+}
+add_action('frontpage_template', 'easiestwp_front_page_template');
