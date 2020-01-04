@@ -25,17 +25,18 @@
 						<p class="meta meta-cat"><?php the_category(); ?></p>
 						<p class="meta meta-tag"><?php the_tags(); ?></p>
 					</div>
+					<?php the_meta(); ?>
 
 					<?php the_post_navigation(array(
-							'prev_text' => '前の記事',
-							'next_text' => '次の記事'
-						)); ?>
+						'prev_text' => '前の記事',
+						'next_text' => '次の記事'
+					)); ?>
 				</div>
 			</div>
 
 			<?php if (comments_open() || get_comments_number()) {
-					comments_template();
-				} ?>
+				comments_template();
+			} ?>
 
 		</div>
 
